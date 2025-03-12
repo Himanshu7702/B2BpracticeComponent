@@ -1,0 +1,62 @@
+.search-container {
+    position: relative;
+    width: 400px; /* adjust as needed */
+}
+
+/* The icon when search is closed */
+.search-icon-closed {
+    cursor: pointer;
+    /* style the closed icon as you like */
+}
+
+/* The container with input + icon on the right */
+.search-input-container {
+    position: relative;
+}
+
+.search-input {
+    width: 100%;
+    padding-right: 40px; /* space for the icon inside */
+}
+
+/* The icon inside the input container, on the right */
+.search-icon-inside {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #a36a14; /* optional styling */
+}
+
+/* The dropdown appears below the search bar */ 
+.dropdown {
+    position: absolute;
+    top: 100%;  /* below the search-input-container */
+    left: 0;
+    width: 100%;
+    background: #737778;
+    border: none;  /* no bounding border */
+    padding: 10px;
+    z-index: 999;
+}
+
+/* Gold headings for products/category */
+.section-title {
+    color: #ffcc00;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+/* Each result item with right arrow */
+.result-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+}
+.result-item:hover { 
+    background-color: #f9f9f9;
+}

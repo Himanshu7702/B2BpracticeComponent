@@ -1,0 +1,34 @@
+   <!-- <template>
+    <div class="product-detail">
+        <template if:true={error}>
+            <p>{error}</p>
+        </template>
+        <template if:true={product}>
+            <h1>{product.name}</h1>
+            <p>{product.description}</p>
+            <p>Price: {product.price}</p>
+        </template>
+    </div>
+</template> --> 
+
+
+<template>
+    <div class="product-detail">
+        <template if:true={product}>
+            <h1>{product.Name}</h1>
+            <p><strong>SKU:</strong> {product.StockKeepingUnit}</p>
+            <p>{product.Description}</p>
+            <p><strong>Price:</strong> ₹{product.StandardPrice}</p>
+
+            <div class="product-images">
+                <template for:each={images} for:item="img">
+                    <img key={img} src={img} alt="Product Image" />
+                </template>
+            </div>
+        </template>
+
+        <template if:false={product}>
+            <p>Loading product details...</p>
+        </template>
+    </div>
+</template>

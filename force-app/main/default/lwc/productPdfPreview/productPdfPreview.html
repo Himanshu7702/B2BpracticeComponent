@@ -1,0 +1,46 @@
+<!-- <template>
+    <lightning-card title="Product PDF">
+        <template if:true={pdfUrl}>
+            <div class="button-container">
+                <lightning-button label="Preview PDF" onclick={handlePreview}></lightning-button>
+                <a href={pdfUrl} target="_blank">
+                    <lightning-button label="Download PDF" variant="brand"></lightning-button>
+                </a>
+            </div>
+            <iframe src={pdfUrl} class="pdf-preview"></iframe>
+        </template>
+
+        <template if:false={pdfUrl}>
+            <p>No PDF available for this product.</p>
+        </template>
+    </lightning-card>
+</template> -->
+
+<!-- <template>
+    <lightning-card title="Product PDF">
+        <template if:true={pdfUrl}>
+            <iframe src={pdfUrl} class="pdf-preview"></iframe>
+            <br>
+            <lightning-button label="Download PDF" variant="brand" onclick={handleDownload}></lightning-button>
+        </template>
+        <template if:false={pdfUrl}>
+            <p>No PDF available for this product.</p>
+        </template>
+    </lightning-card>
+    <div>{productdetaildMedia}</div>
+</template> -->
+
+
+<template>
+    <lightning-card title="Product PDF">
+        <template if:true={pdfUrl}>
+            <iframe src={pdfUrl} class="pdf-preview"></iframe>
+            <br>
+            <lightning-button label="Download PDF" variant="brand" onclick={handleDownload}></lightning-button>
+        </template>
+        <template if:false={pdfUrl}>
+            <p>No PDF available for this product.</p>
+        </template>
+    </lightning-card>
+</template>
+

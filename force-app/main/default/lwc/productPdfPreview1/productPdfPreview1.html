@@ -1,0 +1,50 @@
+<!-- <template>
+    <lightning-card title="Product PDF">
+        <template if:true={pdfUrl}>
+            <iframe src={pdfUrl} class="pdf-preview"></iframe>
+            <br>
+            <lightning-button label="Download PDF" variant="brand" onclick={handleDownload}></lightning-button>
+        </template>
+        <template if:false={pdfUrl}>
+            <p>No PDF available for this product.</p>
+        </template>
+    </lightning-card>
+</template>
+ -->
+ <!-- <template>
+    <div class="pdf-container">
+        <h2 class="section-title">Documents & Attachments</h2>
+        <ul class="pdf-list">
+            <template for:each={pdfUrls} for:item="pdf">
+                <li key={pdf.id} class="pdf-item">
+                    <lightning-icon icon-name="doctype:pdf" alternative-text="PDF" size="small"></lightning-icon>
+                    <a href="#" data-url={pdf.url} onclick={handlePreview}>
+                        {pdf.title}
+                    </a>
+                </li>
+            </template>
+        </ul>
+    </div>
+</template> -->
+ 
+<template>
+    <div class="pdf-container">
+        <h2 class="section-title">Documents & Attachments</h2>
+        <template if:true={pdfUrl}>
+            <a href="javascript:void(0);" onclick={handlePreview} class="pdf-link">
+                📄 View PDF
+            </a>
+        </template>
+        <template if:false={pdfUrl}>
+            <p>No PDF available for this product.</p>
+        </template>
+    </div>
+</template> 
+
+
+
+
+
+
+
+

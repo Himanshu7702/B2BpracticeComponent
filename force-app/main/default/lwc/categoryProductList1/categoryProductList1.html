@@ -1,0 +1,63 @@
+<!-- <template>
+    <lightning-card title="Products">
+        <template if:true={error}>
+            <p class="error">{error}</p>
+        </template>
+        <template if:true={products}>
+            <div class="slds-grid slds-wrap">
+                <template for:each={products} for:item="prod">
+                    <div key={prod.Id} class="slds-col slds-size_1-of-3 slds-p-around_small">
+                        <div class="product-card" data-id={prod.Id} data-name={prod.Name} onclick={handleProductClick}>                            
+                            <img src={prod.ImageUrl} alt={prod.Name} style="width:100%; height:auto;" />
+                            <h2>{prod.Name}</h2>
+                            <p>Price: {prod.Price}</p>
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </template>
+    </lightning-card>
+</template> -->
+
+<!-- <template>
+    <lightning-card title="Products">
+        <template if:true={error}>
+            <p class="error">{error}</p>
+        </template>
+        <template if:true={products}>
+            <div class="slds-grid slds-wrap">
+                <template for:each={products} for:item="product">
+                    <div key={product.Id} class="slds-col slds-size_1-of-3 slds-p-around_small">
+                        <div class="product-card" data-id={product.Id} onclick={handleProductClick}>
+                            <img src={product.ImageUrl} alt={product.Name} style="width:100%; height:auto;"/>
+                            <h2>{product.Name}</h2>
+                            <p>Price: {product.Price}</p>
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </template>
+    </lightning-card>
+</template> -->
+
+<template>
+    <lightning-card title="Products" icon-name="utility:products">
+        <template if:true={products.length}>
+            <div class="product-grid">
+                <template for:each={products} for:item="product">
+                    <div key={product.Id} class="product-card" data-id={product.Id} onclick={handleProductClick}>
+                        <img src={product.ImageUrl} alt={product.Name} class="product-image"/>
+                        <div class="product-details">
+                            <h2 class="product-name">{product.Name}</h2>
+                            <p class="product-price">{product.Price}</p>
+                        </div>
+                    </div>
+                </template>
+            </div>
+        </template>
+
+        <template if:true={error}>
+            <div class="error-message slds-text-color_error">{error}</div>
+        </template>
+    </lightning-card>
+</template>

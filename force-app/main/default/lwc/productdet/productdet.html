@@ -1,0 +1,89 @@
+<!--<template>
+    <lightning-card title="Product Details">
+        <template if:true={product}>
+            <p><strong>Name:</strong> {product.Name}</p>
+
+            <template if:true={product.StockKeepingUnit}>
+                <p><strong>SKU:</strong> {product.StockKeepingUnit}</p>
+            </template>
+
+            <p><strong>Description:</strong> {product.Description}</p>
+
+            <template if:true={images.length}>
+                <p><strong>Product Images:</strong></p>
+                <template for:each={images} for:item="img">
+                    <img key={img} src={img} alt="Product Image" width="150">
+                </template>
+            </template>
+        </template>
+
+        <template if:false={product}>
+            <p>Loading product details...</p>
+        </template>
+    </lightning-card>
+</template> -->
+
+
+<!--<template>
+    <lightning-card title="Product Details">
+        <template if:true={product}>
+            <p><strong>Name:</strong> {product.Name}</p>
+
+            <template if:true={product.StockKeepingUnit}>
+                <p><strong>SKU:</strong> {product.StockKeepingUnit}</p>
+            </template>
+
+            <p><strong>Description:</strong> {product.Description}</p>
+
+              Product Images 
+            <template  if:true={images.length}>
+                <p><strong>Product Images:</strong></p>
+                <template for:each={images} for:item="img">
+                    <img key={img} src={img} alt="Product Image" width="150">
+                </template>
+            </template>
+                    <template if:false={images.length}>
+                <p>No images available for this product.</p>
+            </template>
+        </template>
+
+        <template if:false={product}>
+            <p>Loading product details...</p>
+        </template>
+    </lightning-card>
+</template> -->
+
+<template>
+    <div class="product-container">
+        <h1>Product Details</h1>
+
+        <template if:true={product}>
+            <div class="product-info">
+                <h2>{product.Name}</h2>
+                <template if:true={product.StockKeepingUnit}>
+                    <p><strong>SKU:</strong> {product.StockKeepingUnit}</p>
+                </template>
+                <p><strong>Description:</strong> {product.Description}</p>
+                <h3>Prices</h3>
+            <template for:each={prices} for:item="priceEntry">
+                <p key={priceEntry.price}>
+                    <strong>{priceEntry.priceBook}:</strong> {priceEntry.price}
+                </p>
+            </template>
+            </div>
+
+            <template if:true={images}>
+                <div class="image-gallery">
+                    <h3>Product Images</h3>
+                    <template for:each={images} for:item="imgUrl">
+                        <img key={imgUrl} src={imgUrl} alt="Product Image" class="product-image" width="150" />
+                    </template>
+                </div>
+            </template>
+        </template>
+
+        <template if:false={product}>
+            <p>Loading product details...</p>
+        </template>
+    </div>
+</template>

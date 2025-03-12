@@ -1,0 +1,287 @@
+<!-- <template>
+    <div class="search-container">
+        <input 
+            type="text" 
+            class="search-input"
+            placeholder="Search..."
+            oninput={handleInputChange}
+        />
+
+        <template if:true={showDropdown}>
+            <div class="dropdown">
+                        Products Section 
+                <template if:true={products.length}>
+                    <h3 class="section-title">Products</h3>
+                    <template for:each={products} for:item="prod">
+                        <div 
+                            key={prod.Id} 
+                            class="dropdown-item" 
+                            data-id={prod.Id} 
+                            onclick={handleProductClick}
+                        >
+                            {prod.Name} ➜
+                        </div>
+                    </template>
+                </template>
+
+                Category Section 
+                <template if:true={categories.length}>
+                    <h3 class="section-title">Category</h3>
+                    <template for:each={categories} for:item="cat">
+                        <div 
+                            key={cat.Id} 
+                            class="dropdown-item" 
+                            data-id={cat.Id} 
+                            onclick={handleCategoryClick}
+                        >
+                            {cat.Name} ➜
+                        </div>
+                    </template>
+                </template>
+            </div>
+        </template>
+    </div>
+</template>
+ -->
+
+ <!-- <template>
+    <div class="search-container">
+         Search Icon  
+        <lightning-icon icon-name="utility:search" size="medium" onclick={handleIconClick}></lightning-icon>
+        
+         Search Box: Only visible when showSearchBox is true  
+        <template if:true={showSearchBox}>
+            <div class="search-box" onclick={handleBoxClick}>
+                <input type="text" class="search-input" placeholder="Search products..." oninput={handleSearchChange} />
+                <template if:true={products.length}>
+                    <ul class="search-results">
+                        <template for:each={products} for:item="prod">
+                            <li key={prod.Id} data-id={prod.Id} onclick={handleProductClick} class="search-item">
+                                {prod.Name}
+                            </li>
+                        </template>
+                    </ul>
+                </template>
+            </div>
+        </template>
+    </div>
+</template> -->
+
+<!-- <template>
+    <div class="search-container">
+        
+        <lightning-icon icon-name="utility:search" size="medium" onclick={handleIconClick}></lightning-icon>
+        
+        <template if:true={showSearchBox}>
+            <div class="search-box" onclick={handleBoxClick}>
+                <input type="text" class="search-input" placeholder="Search products..." oninput={handleInputChange} />
+                <template if:true={products.length}>
+                    <ul class="search-results">
+                        <template for:each={products} for:item="prod">
+                            <li key={prod.Id} data-id={prod.Id} onclick={handleProductClick} class="search-item">
+                                {prod.Name}
+                            </li>
+                        </template>
+                    </ul>
+                </template>
+            </div>
+        </template>
+    </div>
+</template> -->
+
+
+<!-- <template>
+    <lightning-card title="Account Search" icon-name="standard:search">
+        <div class="slds-p-around_medium">
+             Search Input 
+            <lightning-input type="text" placeholder="Search Accounts..." onchange={handleSearch}></lightning-input>
+        </div>
+Search Results 
+        <template if:true={accounts}>
+            <ul class="slds-list_dotted">
+                <template for:each={accounts} for:item="account">
+                    <li key={account.Id}>
+                        {account.Name}
+                    </li>
+                </template>
+            </ul>
+        </template>
+        
+        <template if:true={noResults}>
+            <p>No accounts found.</p>
+        </template>
+    </lightning-card>
+</template> -->
+
+
+<!-- <template>
+    <lightning-card title="Store Products">
+        <div class="slds-m-around_medium">
+             Search Input 
+            <lightning-input 
+                type="text" 
+                label="Search Products" 
+                placeholder="Enter product name..." 
+                onchange={handleSearch}>
+            </lightning-input>
+        </div>
+
+        Loading Spinner 
+        <template if:true={isLoading}>
+            <lightning-spinner alternative-text="Loading..." size="medium"></lightning-spinner>
+        </template>
+
+        Product List 
+        <template if:true={products.length}>
+            <div class="product-grid">
+                <template for:each={products} for:item="product">
+                    <div key={product.Id} class="product-card">
+                        <h2>{product.Name}</h2>
+                        <p>{product.Description}</p>
+                        <p><strong>SKU:</strong> {product.StockKeepingUnit}</p>
+                        <p><strong>Price:</strong> ${product.Price__c}</p>
+                    </div>
+                </template>
+            </div>
+        </template>
+
+         No Products Found Message 
+        <template if:false={products.length}>
+            <p class="slds-text-color_error slds-m-around_medium">No products found.</p>
+        </template>
+    </lightning-card>
+</template>
+ -->
+
+
+ <!-- <template>
+    <lightning-card title="Product Search" icon-name="utility:search">
+        <div class="slds-p-around_medium">
+            Search Input Field
+            <lightning-input 
+                type="search" 
+                label="Search Products" 
+                value={searchKey} 
+                onchange={handleInputChange} 
+                placeholder="Enter product name...">
+            </lightning-input>
+            
+            Loading Indicator
+            <template if:true={isLoading}>
+                <p>Loading...</p>
+            </template>
+            
+            Product Suggestions
+            <template if:true={products.length}>
+                <h3>Products</h3>
+                <ul>
+                    <template for:each={products} for:item="product">
+                        <li key={product.Id} 
+                            data-id={product.Id} 
+                            onclick={handleProductClick} 
+                            class="result-item">
+                            {product.Name} - {product.StockKeepingUnit}
+                        </li>
+                    </template>
+                </ul>
+            </template>
+            
+             Category Suggestions (shows only if there are any) 
+            <template if:true={showCategories}>
+                <h3>Categories</h3>
+                <ul>
+                    <template for:each={categories} for:item="cat">
+                        <li key={cat.Id} class="result-item">
+                            {cat.Name}
+                        </li>
+                    </template>
+                </ul>
+            </template>
+            
+            No Results Message
+            <template if:true={noProductsFound}>
+                <p>No products found.</p>
+            </template>
+        </div>
+    </lightning-card>
+</template> -->
+
+
+<template>
+    <div class="search-container">
+        <!-- If NOT open, just show the icon -->
+        <template if:false={isSearchOpen}>
+            <lightning-icon
+                icon-name="utility:search"
+                size="medium"
+                class="search-icon-closed"
+                onclick={handleIconClick}>
+            </lightning-icon>
+        </template>
+
+        <!-- If open, show the rectangular bar with an icon on the right, plus dropdown below -->
+        <template if:true={isSearchOpen}>
+            <div class="search-input-container">
+                <lightning-input
+                    class="search-input"
+                    type="text"
+                    value={searchKey}
+                    placeholder="Search over 100+ Coffee products here"
+                    onchange={handleInputChange}>
+                </lightning-input>
+
+                <!-- Icon on the right side of the input (optional).
+                     If you want a clickable close icon, you can do it here. -->
+                <lightning-icon
+                    icon-name="utility:search"
+                    size="small"
+                    class="search-icon-inside">
+                </lightning-icon>
+            </div>
+
+            <!-- The dropdown if showDropdown is true -->
+            <template if:true={showDropdown}>
+                <div class="dropdown">
+                    <template if:true={isLoading}>
+                        <p></p>
+                    </template>
+
+                    <!-- Products Section -->
+                    <template if:true={products.length}>
+                        <h3 class="section-title">Products</h3>
+                        <template for:each={products} for:item="prod">
+                            <div
+                                key={prod.Id}
+                                class="result-item"
+                                data-id={prod.Id}
+                                onclick={handleProductClick}>
+                                {prod.Name}
+                                <lightning-icon icon-name="utility:chevronright" size="x-small"></lightning-icon>
+                            </div>
+                        </template>
+                    </template>
+
+                    <!-- Category Section -->
+                    <template if:true={categories.length}>
+                        <h3 class="section-title">Category</h3>
+                        <template for:each={categories} for:item="cat">
+                            <div
+                                key={cat.Id}
+                                class="result-item"
+                                data-id={cat.Id}
+                                onclick={handleCategoryClick}>
+                                {cat.Name}
+                                <lightning-icon icon-name="utility:chevronright" size="x-small"></lightning-icon>
+                            </div>
+                        </template>
+                    </template>
+
+                    <!-- No Results -->
+                    <template if:true={noResults}>
+                        <p>No results found.</p>
+                    </template>
+                </div>
+            </template>
+        </template>
+    </div>
+</template>

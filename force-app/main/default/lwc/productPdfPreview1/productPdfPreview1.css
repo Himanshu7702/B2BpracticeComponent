@@ -1,0 +1,34 @@
+.pdf-container {
+    padding: 16px;
+    font-family: Arial, sans-serif;
+}
+
+.section-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.pdf-list {
+    list-style: none;
+    padding: 0;
+}
+
+.pdf-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.pdf-item a {
+    text-decoration: none;
+    color: #0070d2;
+    font-weight: 500;
+}
+
+.pdf-item a:hover {
+    text-decoration: underline;
+    color: #005fb2;
+}
+
